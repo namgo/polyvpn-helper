@@ -26,7 +26,6 @@ def get_webvpn_cookie(saml_url, group_name='SSLProfileQuartz'):
     saml = html.find('input', attrs={'name': 'SAMLResponse'})['value']
     csrf = html.find('input', attrs={'name': 'csrf_token'})['value']
     group_list = html.find('input', attrs={'name': 'group_list'})['value']
-    #r.headers.update({'Referer': 'https://ssl.vpn.polymtl.ca/+CSCOE+/saml/sp/acs?tgname=SSLProfileQuartz'})
     resp = r.post('https://ssl.vpn.polymtl.ca/+webvpn+/index.html',
                   data={'SAMLResponse': saml,
                         'group_list': group_list, 
