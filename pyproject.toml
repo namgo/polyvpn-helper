@@ -1,0 +1,12 @@
+
+[project]
+name = "polyvpn-helper"
+version = "0.0.1"
+dependencies = [
+	"beautifulsoup4",
+	"requests"
+]
+
+[project.scripts]
+
+polyvpn-helper = "polyvpn:entrypoint"
